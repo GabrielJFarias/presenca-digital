@@ -37,16 +37,16 @@ const services = [
 
 const projects = [
   {
-    title: 'Gabriel J. Farias',
-    type: 'Site publicado · portfólio',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85',
+    title: 'FORJA',
+    type: 'Academia · treino funcional',
+    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=85',
     href: 'https://gabrieljfarias.github.io/Sites/',
     className: 'md:col-span-7',
   },
   {
-    title: 'Modula Biz',
-    type: 'Site publicado · negócios',
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85',
+    title: 'Ateliê Local',
+    type: 'Estética · cuidados pessoais',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85',
     href: 'https://modula-biz.vercel.app/',
     className: 'md:col-span-5 md:mt-20',
   },
