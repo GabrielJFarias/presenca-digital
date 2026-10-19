@@ -37,22 +37,18 @@ const services = [
 
 const projects = [
   {
-    title: 'Casa Lume',
-    type: 'Arquitetura & interiores',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
+    title: 'Gabriel J. Farias',
+    type: 'Site publicado · portfólio',
+    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85',
+    href: 'https://gabrieljfarias.github.io/Sites/',
     className: 'md:col-span-7',
   },
   {
-    title: 'Nativa Café',
-    type: 'Café especial',
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=85',
+    title: 'Modula Biz',
+    type: 'Site publicado · negócios',
+    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85',
+    href: 'https://modula-biz.vercel.app/',
     className: 'md:col-span-5 md:mt-20',
-  },
-  {
-    title: 'Ateliê Aflora',
-    type: 'Marca autoral',
-    image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85',
-    className: 'md:col-span-5',
   },
 ];
 
@@ -107,7 +103,7 @@ const Index = () => {
 
         <section id="processo" className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28"><div className="grid gap-12 lg:grid-cols-[.85fr_1.15fr]"><div><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#79911f]">Como funciona</p><h2 className="mt-4 max-w-md text-4xl font-extrabold leading-tight tracking-[-.05em] sm:text-5xl">Leve, claro e sem enrolação.</h2><p className="mt-5 max-w-md leading-7 text-[#68766f]">Você não precisa saber exatamente por onde começar. Eu conduzo o processo e deixo tudo simples.</p></div><div className="grid gap-4 sm:grid-cols-3">{[['01', 'A conversa', 'Entendo sua ideia, seu público e o que você precisa alcançar.'], ['02', 'A criação', 'Transformo tudo em uma estrutura bonita, clara e estratégica.'], ['03', 'O lançamento', 'Ajustamos juntos e colocamos seu site no ar para o mundo ver.']].map(([num, title, text]) => <article key={num} className="rounded-[1.5rem] border border-[#e0e5dc] bg-white/60 p-6"><span className="text-sm font-extrabold text-[#9db52e]">{num}</span><h3 className="mt-12 text-lg font-extrabold">{title}</h3><p className="mt-3 text-sm leading-6 text-[#728078]">{text}</p></article>)}</div></div></section>
 
-        <section id="projetos" className="bg-[#e9eee5] py-20 lg:py-28"><div className="mx-auto max-w-7xl px-5 lg:px-8"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#79911f]">Projetos conceito</p><h2 className="mt-4 text-4xl font-extrabold tracking-[-.05em] sm:text-5xl">Ideias que ganharam forma.</h2></div><p className="max-w-xs text-sm leading-6 text-[#6c7b72]">Alguns projetos criados para mostrar possibilidades para marcas pequenas e cheias de potencial.</p></div><div className="mt-12 grid gap-6 md:grid-cols-12">{projects.map((project) => <a href="#contato" key={project.title} className={`${project.className} group block`}><div className="relative overflow-hidden rounded-[1.5rem] bg-[#cdd9c3]"><img src={project.image} alt={project.title} className="h-72 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-96" /><div className="absolute inset-0 bg-[#18231f]/30" /><div className="absolute bottom-5 left-5 text-white"><p className="text-xs font-bold uppercase tracking-wider text-[#d7ef65]">{project.type}</p><h3 className="mt-1 text-2xl font-extrabold">{project.title}</h3></div><span className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full bg-white text-[#18231f] opacity-0 transition group-hover:opacity-100"><ArrowUpRight size={19} /></span></div></a>)}</div></div></section>
+        <section id="projetos" className="bg-[#e9eee5] py-20 lg:py-28"><div className="mx-auto max-w-7xl px-5 lg:px-8"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#79911f]">Trabalhos selecionados</p><h2 className="mt-4 text-4xl font-extrabold tracking-[-.05em] sm:text-5xl">Sites que já saíram do papel.</h2></div><p className="max-w-xs text-sm leading-6 text-[#6c7b72]">Dois projetos que já criei para transformar ideias em experiências digitais reais.</p></div><div className="mt-12 grid gap-6 md:grid-cols-12">{projects.map((project) => <a href={project.href} target="_blank" rel="noreferrer" key={project.title} className={`${project.className} group block`}><div className="relative overflow-hidden rounded-[1.5rem] bg-[#cdd9c3]"><img src={project.image} alt={project.title} className="h-72 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-96" /><div className="absolute inset-0 bg-[#18231f]/30" /><div className="absolute bottom-5 left-5 text-white"><p className="text-xs font-bold uppercase tracking-wider text-[#d7ef65]">{project.type}</p><h3 className="mt-1 text-2xl font-extrabold">{project.title}</h3></div><span className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full bg-white text-[#18231f] opacity-0 transition group-hover:opacity-100"><ArrowUpRight size={19} /></span></div></a>)}</div></div></section>
 
         <section id="contato" className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28"><div className="grid gap-12 rounded-[2rem] bg-[#d7ef65] p-7 sm:p-12 lg:grid-cols-[1fr_.8fr] lg:p-16"><div><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#61741d]">Vamos criar juntos</p><h2 className="mt-4 max-w-lg text-4xl font-extrabold leading-[1.05] tracking-[-.06em] sm:text-6xl">Tem uma ideia? Me conta.</h2><p className="mt-6 max-w-md leading-7 text-[#4f601c]">Se você quer começar a aparecer na internet com mais profissionalismo, esse é um ótimo primeiro passo.</p><div className="mt-8 flex flex-wrap gap-4 text-sm font-bold text-[#405015]"><a href="mailto:oi@norte.studio" className="underline decoration-[#91a92d] underline-offset-4">oi@norte.studio</a><span className="text-[#91a92d]">•</span><span>Atendo de qualquer lugar</span></div></div><form onSubmit={handleSubmit} className="rounded-[1.5rem] bg-[#f6f5f0] p-5 shadow-sm sm:p-7"><label className="block text-xs font-extrabold uppercase tracking-wider text-[#65736b]">Seu nome<input required className="mt-2 w-full rounded-xl border border-[#dce3d6] bg-white px-4 py-3.5 text-sm outline-none transition focus:border-[#91a92d]" placeholder="Como posso te chamar?" /></label><label className="mt-4 block text-xs font-extrabold uppercase tracking-wider text-[#65736b]">Me conte sobre o projeto<textarea required className="mt-2 min-h-28 w-full resize-none rounded-xl border border-[#dce3d6] bg-white px-4 py-3.5 text-sm outline-none transition focus:border-[#91a92d]" placeholder="O que você gostaria de criar?" /></label><button className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#18231f] px-5 py-4 font-bold text-white transition hover:bg-[#34443b]">{sent ? 'Mensagem recebida ✓' : 'Enviar mensagem'} {!sent && <ArrowUpRight size={17} />}</button>{sent && <p className="mt-3 text-center text-xs font-semibold text-[#60731d]">Obrigado! Em breve entro em contato para saber mais.</p>}</form></div></section>
       </main>
