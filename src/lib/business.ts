@@ -1,16 +1,32 @@
-export type Service = { name: string; description: string; price: number; duration: string };
+export type Service = { name: string; description: string };
 export type Business = {
-  category: string; name: string; tagline: string; description: string; phone: string; address: string;
-  hours: string; instagram: string; services: Service[]; accent: string; heroImage: string;
+  category: string;
+  name: string;
+  tagline: string;
+  description: string;
+  phone: string;
+  instagram: string;
+  services: Service[];
+  accent: string;
+  heroImage: string;
 };
 
 export const businesses: Record<string, Business> = {
-  estetica: { category: 'Estética', name: 'Ateliê Local', tagline: 'Seu momento de cuidado começa aqui.', description: 'Um espaço pensado para você desacelerar, se cuidar e sair ainda mais confiante. Atendimento próximo, resultados que você sente.', phone: '5511999999999', address: 'Rua das Flores, 128 — Centro, São Paulo', hours: 'Seg–Sex, 9h–19h · Sáb, 9h–15h', instagram: '@atelielocal', accent: '#0D9488', heroImage: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1400&q=85', services: [{name:'Limpeza de pele',description:'Renovação e cuidado profundo para uma pele radiante.',price:160,duration:'60 min'},{name:'Design de sobrancelhas',description:'Desenho personalizado que realça sua expressão.',price:75,duration:'40 min'},{name:'Massagem relaxante',description:'Uma pausa restauradora para corpo e mente.',price:180,duration:'60 min'},{name:'Drenagem linfática',description:'Leveza e bem-estar com técnica especializada.',price:150,duration:'50 min'}] },
-  barbearia: { category: 'Barbearia', name: 'Barba & Brasa', tagline: 'Estilo afiado. Atendimento de verdade.', description: 'Mais que um corte: um tempo só seu. Técnicas clássicas, conversa boa e aquele cuidado que faz diferença.', phone: '5511999999999', address: 'Rua das Flores, 128 — Centro, São Paulo', hours: 'Ter–Sex, 9h–20h · Sáb, 9h–17h', instagram: '@barbaebrasa', accent: '#0D9488', heroImage: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=85', services: [{name:'Corte masculino',description:'Corte personalizado com acabamento na navalha.',price:60,duration:'40 min'},{name:'Barba completa',description:'Toalha quente, cuidado e desenho impecável.',price:45,duration:'30 min'},{name:'Corte + barba',description:'O combo completo para renovar o visual.',price:95,duration:'70 min'},{name:'Acabamento',description:'Ajustes rápidos para manter o estilo em dia.',price:25,duration:'15 min'}] },
-  auto: { category: 'Auto Center', name: 'Ponto Certo Auto', tagline: 'Seu carro em boas mãos. Sempre.', description: 'Transparência do orçamento à entrega. Cuidamos do seu carro com peças de qualidade e serviço honesto.', phone: '5511999999999', address: 'Av. Central, 420 — Centro, São Paulo', hours: 'Seg–Sex, 8h–18h · Sáb, 8h–13h', instagram: '@pontocertoauto', accent: '#0D9488', heroImage: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1400&q=85', services: [{name:'Revisão preventiva',description:'Inspeção completa para você dirigir tranquilo.',price:250,duration:'2–3 h'},{name:'Troca de óleo',description:'Óleo e filtro adequados para o seu veículo.',price:180,duration:'45 min'},{name:'Alinhamento e balanceamento',description:'Mais estabilidade, segurança e economia.',price:120,duration:'1 h'},{name:'Diagnóstico automotivo',description:'Identificamos o problema antes de qualquer reparo.',price:90,duration:'45 min'}] },
-  pet: { category: 'Pet Care', name: 'Clube do Pet', tagline: 'Carinho e cuidado para quem é da família.', description: 'Um cuidado cheio de carinho para seu melhor amigo. Ambiente tranquilo, equipe apaixonada e cada pet tratado como único.', phone: '5511999999999', address: 'Rua das Flores, 128 — Centro, São Paulo', hours: 'Seg–Sáb, 8h–18h', instagram: '@clubedopet', accent: '#0D9488', heroImage: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1400&q=85', services: [{name:'Banho & tosa',description:'Banho relaxante e tosa no estilo do seu pet.',price:90,duration:'90 min'},{name:'Banho completo',description:'Higiene, secagem cuidadosa e muito carinho.',price:55,duration:'60 min'},{name:'Tosa higiênica',description:'Conforto e higiene para o dia a dia.',price:40,duration:'30 min'},{name:'Hidratação',description:'Pelagem macia, saudável e cheirosa.',price:35,duration:'30 min'}] },
-  personalizado: { category: 'Seu negócio', name: 'Seu Negócio', tagline: 'Um ótimo serviço merece ser encontrado.', description: 'Conte para seus clientes o que você faz de melhor. Atendimento personalizado, qualidade e cuidado em cada detalhe.', phone: '5511999999999', address: 'Adicione seu endereço', hours: 'Adicione seus horários', instagram: '@seunegocio', accent: '#0D9488', heroImage: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85', services: [{name:'Serviço principal',description:'Descreva brevemente o seu serviço.',price:100,duration:'1 hora'},{name:'Serviço complementar',description:'Descreva brevemente o seu serviço.',price:80,duration:'45 min'}] }
+  presencaDigital: {
+    category: 'Criação de sites',
+    name: 'Presença Digital',
+    tagline: 'Sites profissionais para o seu negócio.',
+    description: 'Criamos sites e páginas profissionais com preço acessível para pequenos negócios, comércios, MEIs e profissionais autônomos.',
+    phone: '5519983085773',
+    instagram: '@presenca.digital.sites',
+    accent: '#18BB60',
+    heroImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=75',
+    services: [
+      { name: 'Site institucional', description: 'Apresente sua empresa e seus serviços com clareza.' },
+      { name: 'Landing page', description: 'Divulgue uma oferta, campanha ou serviço.' },
+      { name: 'Catálogo digital', description: 'Organize seus produtos em uma página fácil de compartilhar.' },
+    ],
+  },
 };
 
 export const whatsappUrl = (phone: string, message: string) => `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-export const currency = (value: number) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
